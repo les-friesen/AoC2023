@@ -1,21 +1,17 @@
 # AoC2023
 Advent of Code Challenges 2023
 
-<!-- Entries between SOLUTIONS and RESULTS tags are auto-generated -->
-
 [![AoC](https://badgen.net/badge/AoC/2023/blue)](https://adventofcode.com/2023)
-[![TS](https://badgen.net/badge/Typescript/v5.3+/blue)](https://www.typescriptlang.org/)
+
 
 # 🎄 Advent of Code 2023 🎄
 
 ## Solutions
 
-<!--SOLUTIONS-->
-
-[![Day](https://badgen.net/badge/01/%E2%98%85%E2%98%85/green)](day1)
-[![Day](https://badgen.net/badge/02/%E2%98%85%E2%98%85/green)](day2)
-[![Day](https://badgen.net/badge/03/%E2%98%85%E2%98%86/green)](day3) 
-[![Day](https://badgen.net/badge/04/%E2%98%85%E2%98%86/green)](day4)
+[![Day](https://badgen.net/badge/01/%E2%98%85%E2%98%85/green)](aoc/day1)
+[![Day](https://badgen.net/badge/02/%E2%98%85%E2%98%85/green)](aoc/day2)
+[![Day](https://badgen.net/badge/03/%E2%98%85%E2%98%85/green)](aoc/day3) 
+[![Day](https://badgen.net/badge/04/%E2%98%85%E2%98%85/green)](aoc/day4)
 ![Day](https://badgen.net/badge/5/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/6/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/7/%E2%98%86%E2%98%86/gray)
@@ -38,8 +34,6 @@ Advent of Code Challenges 2023
 ![Day](https://badgen.net/badge/24/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/25/%E2%98%86%E2%98%86/gray)
 
-<!--/SOLUTIONS-->
-
 _Click a badge to go to the specific day._
 
 ---
@@ -47,7 +41,7 @@ _Click a badge to go to the specific day._
 ## Installation
 
 ```
-npm i
+yarn install
 ```
 
 ## Running in dev mode
