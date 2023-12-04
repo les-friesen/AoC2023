@@ -31,7 +31,6 @@ const findTotal = (arr) => {
                     }
                 }  
             } else {
-                
                 for (let i = rowIndex - 1; i <= rowIndex + 1; i++) {
                     for (let j = x[1] - 1; j <= x[1]+x[0].length; j++) {
                         if (wholeArr[i][j] === "*") {
