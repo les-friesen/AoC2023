@@ -4,9 +4,7 @@ const dataArray = inputData.split(/\n/).map(line => line.replace(/[a-zA-Z:]+/g, 
 
 const pairs = dataArray[0].map((time, index) => [+time, +dataArray[1][index]])
 
-// dataArray2 = [ [ 42, 284 ], [ 68, 1005 ], [ 69, 1122 ], [ 85, 1341 ] ]
-
-console.log(pairs)
+// pairs = [ [ 42, 284 ], [ 68, 1005 ], [ 69, 1122 ], [ 85, 1341 ] ]
 
 const findWays = () => {
     let raceTotals =[]
@@ -19,11 +17,7 @@ const findWays = () => {
             }
         }
         raceTotals.push(raceWays)
-        console.log(raceWays)
-
     })
-
-
     return raceTotals.reduce((a,b) => a*b, 1)
 }
 
