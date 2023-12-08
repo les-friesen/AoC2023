@@ -27,8 +27,7 @@ const handsWithRanks = hands.map((pair) => {
         }
 })
 
-const sortedHands =
-    handsWithRanks.sort((a,b) => {
+const sortedHands = handsWithRanks.sort((a,b) => {
         if (a[2] > b[2]) {
             return 1
         } else if (a[2] < b[2]) {
