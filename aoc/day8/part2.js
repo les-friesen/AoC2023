@@ -42,6 +42,7 @@ const findTotal = () => {
         lowestPaths.push(lowestPath)
     })
 
+    //find least common multiple 
     const findLCM = (numbers) => {
         const findGCD = (a, b)  => {
             return b === 0 ? a : findGCD(b, a % b);
@@ -55,6 +56,7 @@ const findTotal = () => {
         }
         return lcm;
         }
+        
     return findLCM(lowestPaths)
 } 
 
