@@ -1,17 +1,16 @@
 const { inputData, example, example2, example3 } = require("./data.js");
 
 const data = inputData.split("\n").map(x => x.split(""))
-const exampleData = example.split("\n").map(x => x.split(""))
-const exampleData2 = example2.split("\n").map(x => x.split(""))
-const exampleData3 = example3.split("\n").map(x => x.split(""))
+// const exampleData = example.split("\n").map(x => x.split(""))
+// const exampleData2 = example2.split("\n").map(x => x.split(""))
+// const exampleData3 = example3.split("\n").map(x => x.split(""))
 
 const findStart = (arr) => {
     let startCoordinates = []
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
             if (arr[i][j] === "S") {
-                startCoordinates.push(i)
-                startCoordinates.push(j)
+                startCoordinates = [i,j]
                 break; 
             }
         }
@@ -21,7 +20,6 @@ const findStart = (arr) => {
 
 const findPath = (arr) => {
     let [row, col] = findStart(arr)
-    let steps = 0;
     let dirOfMove = ""
     let firstDir = ""
 
@@ -29,17 +27,14 @@ const findPath = (arr) => {
 
     if (arr[row-1][col] === "F" || arr[row-1][col] === "7" || arr[row-1][col] === "|") {
         row = row-1
-        steps++
         dirOfMove = "N"
         firstDir = "N"
     } else if (arr[row][col+1] === "-" || arr[row][col+1] === "7" ||  arr[row][col+1] === "J") {
         col = col+1
-        steps++
         dirOfMove = "E"
         firstDir = "E"
     } else if (arr[row+1][col] === "|" || arr[row+1][col] === "L" || arr[row+1][col] === "J") {
         row = row+1
-        steps++
         dirOfMove = "S"
         firstDir = "S"
     }
@@ -51,63 +46,51 @@ const findPath = (arr) => {
             arr[row][col] = "V"
             if (dirOfMove === "S") {
                 row++
-                steps++
             } else if (dirOfMove === "N") {
                 row--
-                steps++
             }
         } else if (arr[row][col] === "-") {
             arr[row][col] = "H"
             if (dirOfMove === "E") {
                 col++
-                steps++
             } else if (dirOfMove === "W") {
                 col--
-                steps++
             }
         } else if (arr[row][col] === "L") {
             arr[row][col] = "H";
             if (dirOfMove === "S") {
                 dirOfMove = "E"
                 col++
-                steps++
             } else if (dirOfMove === "W") {
                 dirOfMove = "N"
                 row--
-                steps++
             }
         } else if (arr[row][col] === "J") {
             arr[row][col] = "H"
             if (dirOfMove === "S") {
                 dirOfMove = "W"
                 col--
-                steps++
             } else if (dirOfMove === "E") {
                 dirOfMove = "N"
                 row--
-                steps++
             }
         } else if (arr[row][col] === "7") {
             arr[row][col] = "V"
             if (dirOfMove === "E") {
                 dirOfMove = "S"
                 row++
-                steps++
             } else if (dirOfMove === "N") {
                 dirOfMove = "W"
                 col--
-                steps++
             }
         } else if (arr[row][col] === "F") {
             arr[row][col] = "V"
             if (dirOfMove === "W") {
                 dirOfMove = "S"
                 row++
-                steps++
             } else if (dirOfMove === "N") {
                 dirOfMove = "E"
                 col++
-                steps++
             }
         }
     }
@@ -132,7 +115,6 @@ const findPath = (arr) => {
     })
 }
 
-
 findNumInside = (arr) => {
     let newArr = findPath(arr); 
     let insideCount = 0 
@@ -151,7 +133,7 @@ findNumInside = (arr) => {
 return insideCount 
 }
 
-console.log(findNumInside(exampleData))
-console.log(findNumInside(exampleData2))
-console.log(findNumInside(exampleData3))
+// console.log(findNumInside(exampleData))
+// console.log(findNumInside(exampleData2))
+// console.log(findNumInside(exampleData3))
 console.log(findNumInside(data))
