@@ -17,7 +17,7 @@ Advent of Code Challenges 2023
 [![Day](https://badgen.net/badge/07/%E2%98%85%E2%98%85/green)](aoc/day7)
 [![Day](https://badgen.net/badge/08/%E2%98%85%E2%98%85/green)](aoc/day8)
 [![Day](https://badgen.net/badge/09/%E2%98%85%E2%98%85/green)](aoc/day9)
-![Day](https://badgen.net/badge/10/%E2%98%86%E2%98%86/gray)
+[![Day](https://badgen.net/badge/10/%E2%98%85%E2%98%85/green)](aoc/day10)
 ![Day](https://badgen.net/badge/11/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/12/%E2%98%86%E2%98%86/gray)
 ![Day](https://badgen.net/badge/13/%E2%98%86%E2%98%86/gray)
