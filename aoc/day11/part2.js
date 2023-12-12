@@ -55,9 +55,8 @@ const calculateDistances = (array, n) => {
 return totalDistance
 }
 
-
-console.log(calculateDistances(exampleData, 2))
-console.log(calculateDistances(exampleData, 10))
-console.log(calculateDistances(exampleData, 100))
-console.log(calculateDistances(data, 2))
+// console.log(calculateDistances(exampleData, 2))
+// console.log(calculateDistances(exampleData, 10))
+// console.log(calculateDistances(exampleData, 100))
+// console.log(calculateDistances(data, 2))
 console.log(calculateDistances(data, 1000000))
