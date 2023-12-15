@@ -68,5 +68,4 @@ const findTotal = (input) => {
 return total 
 }
 
-
 console.log(findTotal(data))

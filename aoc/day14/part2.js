@@ -69,7 +69,7 @@ const cycle = (grid) => {
 }
 
 const repeatCycle = (grid, n) => {
-    let newGrid = grid
+    let newGrid = grid.map(x => [...x])
     for (let i = 1; i <= n; i++) {
         newGrid = cycle(newGrid)
     }
@@ -78,7 +78,7 @@ const repeatCycle = (grid, n) => {
 
 const findPattern = (array, number) => {
     let snapshots = []
-    let newGrid = array
+    let newGrid = array.map(x => [...x])
     for (let i = 1; i <= number; i++) {
         newGrid = cycle(newGrid)
         let pattern = newGrid.map(x => x.join("")).toString().replaceAll(",","")
@@ -97,14 +97,14 @@ const countLoad = (grid, n) => {
     return newGrid.reduce((acc, row, index, arr) => acc + (row.filter(x => x === "O").length)*(arr.length-index), 0)
 }
 
-// const [cycleStart, period] = findPattern(data, 200)
+const [cycleStart, period] = findPattern(data, 200)
 // cycleStart = 108
 // period = 42
-// There is a bug -> when I run both the findPattern function and countLoad function the final amount changes.
 
-console.log(countLoad(data, (1000000000-108)%42+108))
+console.log(countLoad(data, (1000000000-cycleStart)%period+cycleStart))
+// answer = 88680
 
-//i.e the 1 billionth iteration is equal to the 1000th iteration is equal to the 118th, 10 into the sequence starting at 108. 
+
 
 
 
