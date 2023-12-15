@@ -20,7 +20,7 @@ const findBoxNumber = (string) => {
 
 const part2 = (input) => {
     let data = [...input]
-    let boxes = new Array(256).fill([])
+    let boxes = new Array(256).fill().map( () => [] )
     data.forEach(string => {
         if (string.includes("-")) {
             const label = string.replace("-", "")
