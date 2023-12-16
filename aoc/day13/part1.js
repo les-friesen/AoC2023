@@ -3,8 +3,6 @@ const { inputData, example } = require("./data.js");
 const exampleData = example.split(/\n\n/)
                             .map(block => block.split(/\n/))
 
-// console.log(exampleData)
-
 const data = inputData.split(/\n\n/)
                     .map(block => block.split(/\n/))
 
@@ -23,7 +21,7 @@ const calculateScore = (array) => {
             }
         }
     }
-    
+    // checking vertical
     for (let j = 0; j < array[0].length; j++) {  
         if (array.every(row => row[j] === row[j+1])) {
             if (j >= (array[0].length - 1)/2) {

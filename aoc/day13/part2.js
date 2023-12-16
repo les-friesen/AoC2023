@@ -53,7 +53,9 @@ const findTotal = (input) => {
                 if (set[i][j] === "#") {
                     let newSet = [...set]
                     newSet[i] = newSet[i].substring(0,j) + "." + newSet[i].substring(j+1);
+                    // Make sure a new reflection line has been found that isn't equal to the old one
                     if (calculateScore(newSet)[0] > 0 && calculateScore(newSet).toString() !== calculateScore(set).toString()) {
+                        // Filter out the old reflection line
                         total += calculateScore(newSet).filter(x => x !== calculateScore(set)[0])[0]
                         matchFound = true; 
                         break; 
