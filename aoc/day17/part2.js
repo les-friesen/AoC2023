@@ -60,3 +60,4 @@ const findPath = (grid) => {
 }
 
 console.log(findPath(data))
+

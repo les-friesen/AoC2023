@@ -20,7 +20,6 @@ const findPath = (grid) => {
         const {row, col, rowDir, colDir, consecutive, heatLoss} = minHeap.pop()
 
         if (row === grid.length - 1 && col === grid[0].length -1 ) {
-            // console.log(seen)
             return heatLoss
         }
 
@@ -56,7 +55,6 @@ const findPath = (grid) => {
                 if (newRow >= 0 && newRow < grid.length && newCol >= 0 && newCol < grid[0].length) {
                     minHeap.push({row: newRow, col: newCol, rowDir: newRowDir, colDir: newColDir, consecutive: 1, heatLoss: heatLoss + grid[newRow][newCol]})
                 }
-
             }
         })
     }
