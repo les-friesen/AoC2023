@@ -1,5 +1,7 @@
 const { inputData, example } = require("./data.js");
 
+// Original solution
+
 const parseData = (data) => {
     let [workflows, parts] = data.split("\n\n")
     parts = parts.replace(/[xmas=]/g, "").replaceAll("{", "[").replaceAll("}", "]").split("\n").map(x => JSON.parse(x))

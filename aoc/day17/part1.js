@@ -1,3 +1,6 @@
+// Logic & Hints from Hyper-Neutrino https://www.youtube.com/watch?v=lxm6i21O83k&t=959s
+// Translated to Javascript from Python by me. 
+
 const { Heap } = require('heap-js')
 
 const { inputData, example } = require("./data.js");
