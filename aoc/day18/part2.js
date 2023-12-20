@@ -4,7 +4,6 @@ const data = inputData.replaceAll(/[\)\(#]/g, "").split("\n").map(x => x.split("
 
 const exampleData = example.replaceAll(/[\)\(#]/g, "").split("\n").map(x => x.split(" ")).map(x => x[2])
 
-
 const calculateArea = (input) => {
 
     let current = [0, 0];
@@ -12,8 +11,8 @@ const calculateArea = (input) => {
     
     coordinatesArr.push(current[0], current[1]);
 
-// //we will need to add half the perimeter + 1 to the area
-// //https://en.wikipedia.org/wiki/Pick%27s_theorem
+    // //we will need to add half the perimeter + 1 to the area
+    // //https://en.wikipedia.org/wiki/Pick%27s_theorem
     let perimeter = 0;
 
     for (let i = 0; i < input.length; i++) {
@@ -65,8 +64,6 @@ const calculateArea = (input) => {
         }
             
 return getAreaFromCoordinates(coordinatesArr) + perimeter / 2 + 1;
-
-
 }
 
 console.log(calculateArea(data))

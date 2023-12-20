@@ -1,5 +1,8 @@
 const { inputData, example } = require("./data.js");
 
+// Not my original solution -->>  https://github.com/surgi1/adventofcode/blob/main/2023/day19/script.js
+// Copied here to learn from. 
+
 let [flowsLit, ] = inputData.split("\n\n"),
     flows = {};
 
