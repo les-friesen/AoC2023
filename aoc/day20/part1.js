@@ -1,8 +1,5 @@
 const { inputData, example1, example2 } = require("./data.js");
 
-// Logic & Hints from Hyper-Neutrino https://www.youtube.com/watch?v=lxm6i21O83k&t=959s
-// Translated to Javascript from Python
-
 const part1 = (data) => {
 
     let modules = {}
