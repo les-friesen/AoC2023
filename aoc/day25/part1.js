@@ -32,7 +32,6 @@ const parseGraph = () => {
   const graph = parseGraph();
   
   const part1 = ({ nodes, edges }) => {
-    // console.log(nodes, edges);
   
     const V = nodes.length;
     const E = edges.length;

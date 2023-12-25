@@ -78,33 +78,24 @@ const part1 = (data) => {
         }
     }
    
+    // My part 2 solution, using recursion and a set. 
 
-    // Part 2 was much easier and quicker, as I just had to go through each block, 
-    // and then for all the block dependent on it, I check to see if they could be removed, 
-    // with a very similar logic to part 1, slightly adjusted.
-
-    // function is currently adding things multiple times. make a unique set? 
     const getChildren = (id) => {
         const originalId = id
         let children = []
-        const addChildren = (newId) => {
-                // console.log(blocksObj[id].supports)
-                
+        const addChildren = (newId) => {     
                     blocksObj[newId].supports.filter(support => blocksObj[support].supportedBy.every(supportedBy => children.includes(supportedBy) || supportedBy === originalId)).forEach(support => {
                     children.push(support)
                     addChildren(support)
                     })
-                
             }
-            
         addChildren(originalId);
-        // console.log(children)
         const childrenSet = new Set(children)
     return childrenSet.size
     }
 
+    // Hyper neutrino's solution using a BFS algorithm / priority queue and set. 
     // let total = 0
-
     // Object.values(blocksObj).forEach(block => {
     //     let queue = []
     //     blocksObj[block.id].supports.forEach(supported => {
@@ -112,10 +103,8 @@ const part1 = (data) => {
     //             queue.push(supported)
     //         }
     //     })
-
     //     let falling = new Set(queue)
     //     falling.add(block.id)
-
     //     while (queue.length) {
     //         const newId = queue.shift()
     //         console.log(newId)
@@ -128,16 +117,10 @@ const part1 = (data) => {
     //     }
     //     total += falling.size - 1
     // })
-
-   
-
     let sum = 0 
-
     Object.values(blocksObj).forEach(block => {
             sum += getChildren(block.id)
-
     })
-
     return sum 
 }
 
