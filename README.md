@@ -32,7 +32,7 @@ Advent of Code Challenges 2023
 [![Day](https://badgen.net/badge/22/%E2%98%85%E2%98%85/green)](aoc/day22)
 [![Day](https://badgen.net/badge/23/%E2%98%85%E2%98%85/green)](aoc/day23)
 [![Day](https://badgen.net/badge/24/%E2%98%85%E2%98%85/green)](aoc/day24)
-![Day](https://badgen.net/badge/25/%E2%98%86%E2%98%86/gray)
+[![Day](https://badgen.net/badge/25/%E2%98%85%E2%98%85/green)](aoc/day25)
 
 _Click a badge to go to the specific day._
 
