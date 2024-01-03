@@ -36,7 +36,6 @@ Advent of Code Challenges 2023
 
 _Click a badge to go to the specific day._
 
----
 
 ## Installation
 
